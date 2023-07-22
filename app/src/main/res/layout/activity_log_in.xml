@@ -30,14 +30,15 @@
         app:boxStrokeColor="@color/Blue"
         app:hintTextColor="@color/Blue"
         android:layout_gravity="center"
-        android:id="@+id/etname"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/etph"
             android:drawableStart="@drawable/baseline_person_24"
-            android:hint="\t Enter your name" />
+            android:hint="\t Enter your Ph No." />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -51,12 +52,13 @@
         android:layout_gravity="center"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/Blue"
-        android:id="@+id/etpassword"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/etpassword"
             android:drawableStart="@drawable/baseline_lock_24"
             android:hint="\t Enter your password"
             />
