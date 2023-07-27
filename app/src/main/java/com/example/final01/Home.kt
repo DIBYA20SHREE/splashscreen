@@ -13,8 +13,8 @@ class Home : AppCompatActivity() {
         val mail = intent.getStringArrayExtra(LogIn.KEY2)
         val phone = intent.getStringArrayExtra(LogIn.KEY3)
 
-        val txtHome = findViewById<TextView>(R.id.txtHome)
-        txtHome.text = "Welcome $name"
+        val home = findViewById<TextView>(R.id.txtHome)
+        home.text = "Welcome$name"
 
 
     }

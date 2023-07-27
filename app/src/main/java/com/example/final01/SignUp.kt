@@ -38,7 +38,7 @@ class SignUp : AppCompatActivity() {
             database= FirebaseDatabase.getInstance().getReference("users")
 
             database.child(phone).setValue(user).addOnSuccessListener {
-                etname.text?.clear()
+
                 Toast.makeText(this, "User Registered", Toast.LENGTH_SHORT).show()
             }.addOnSuccessListener {
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()

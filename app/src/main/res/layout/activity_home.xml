@@ -15,7 +15,6 @@
         android:text="Welcome to home page"
         android:layout_gravity="center"
         android:textSize="30sp"
-        android:layout_marginTop="200dp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="227dp" />
+        android:layout_marginTop="20dp"
+        />
 </LinearLayout>
