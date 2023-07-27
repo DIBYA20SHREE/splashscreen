@@ -1,5 +1,7 @@
 package com.example.final01
 
+import android.app.Dialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.UserHandle
@@ -13,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase
 class SignUp : AppCompatActivity() {
 
     lateinit var database: DatabaseReference
+    lateinit var dialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +40,24 @@ class SignUp : AppCompatActivity() {
 
             database= FirebaseDatabase.getInstance().getReference("users")
 
+
+
+            dialog = Dialog(this)
+            dialog.setContentView(R.layout.customer_alert)
+
+            var alertbtn = dialog.findViewById<Button>(R.id.btnLGAlert)
+
+            alertbtn.setOnClickListener {
+
+                intent= Intent(applicationContext,LogIn::class.java)
+                startActivity(intent)
+
+
+            }
+
             database.child(phone).setValue(user).addOnSuccessListener {
 
-                Toast.makeText(this, "User Registered", Toast.LENGTH_SHORT).show()
+                dialog.show()
             }.addOnSuccessListener {
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
             }
