@@ -1,8 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Final01" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Final01" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/Blue</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!-- Theme without ActionBar -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
     </style>
 
     <style name="Theme.Final01" parent="Base.Theme.Final01" />

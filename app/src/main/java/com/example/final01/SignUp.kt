@@ -16,8 +16,13 @@ class SignUp : AppCompatActivity() {
     private lateinit var dialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        supportActionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+
 
         val etname= findViewById<TextInputEditText>(R.id.etname)
         val etmail=findViewById<TextInputEditText>(R.id.etMail)

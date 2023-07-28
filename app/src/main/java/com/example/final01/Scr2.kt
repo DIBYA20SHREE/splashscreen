@@ -7,6 +7,8 @@ import android.widget.Button
 
 class Scr2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scr2)
         val logInbtn= findViewById<Button>(R.id.btnLogin)

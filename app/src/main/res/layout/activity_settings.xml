@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".settings">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Setting"
+        android:textColor="@color/Blue"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here is your details"
+        android:textColor="@color/Blue"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/Blue"
+        android:background="@color/Blue"
+
+        >
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+
+            <TextView
+                android:id="@+id/stname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:text="Name: " />
+
+            <TextView
+                android:id="@+id/stemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Email: " />
+
+            <TextView
+                android:id="@+id/stphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Phone no.: " />
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

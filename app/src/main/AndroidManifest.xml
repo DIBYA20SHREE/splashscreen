@@ -13,21 +13,29 @@
         android:theme="@style/Theme.Final01"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".settings"
             android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false"
+            android:theme="@style/Base.Theme.Final01" />
         <activity
             android:name=".SignUp"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LogIn"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Scr2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
