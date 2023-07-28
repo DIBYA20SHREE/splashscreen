@@ -9,12 +9,12 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val name = intent.getStringArrayExtra(LogIn.KEY1)
+        val name = intent.getStringExtra(LogIn.KEY1)
         val mail = intent.getStringArrayExtra(LogIn.KEY2)
         val phone = intent.getStringArrayExtra(LogIn.KEY3)
 
         val home = findViewById<TextView>(R.id.txtHome)
-        home.text = "Welcome$name"
+        home.text = "Welcome $name"
 
 
     }

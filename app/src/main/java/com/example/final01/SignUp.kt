@@ -2,20 +2,18 @@ package com.example.final01
 
 import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.UserHandle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
 
-    lateinit var database: DatabaseReference
-    lateinit var dialog: Dialog
+    private lateinit var database: DatabaseReference
+    private lateinit var dialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +43,7 @@ class SignUp : AppCompatActivity() {
             dialog = Dialog(this)
             dialog.setContentView(R.layout.customer_alert)
 
-            var alertbtn = dialog.findViewById<Button>(R.id.btnLGAlert)
+            val alertbtn = dialog.findViewById<Button>(R.id.btnLGAlert)
 
             alertbtn.setOnClickListener {
 

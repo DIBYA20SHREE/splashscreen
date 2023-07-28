@@ -31,10 +31,10 @@ class LogIn : AppCompatActivity() {
             // take reference till node users
 
             val uniqueId = phone.text.toString()
-            val password= password.text.toString()
-            if(uniqueId.isNotEmpty()&& password.isNotEmpty()){
+            val passW= password.text.toString()
+            if(uniqueId.isNotEmpty()&& passW.isNotEmpty()){
                 readData(uniqueId)
-                readData(password)
+                readData(passW)
             }else{
                 Toast.makeText(this, "Please enter phone number", Toast.LENGTH_SHORT).show()
             }
@@ -47,14 +47,14 @@ class LogIn : AppCompatActivity() {
 
             if(it.exists()){
                 //welcome user in your app with intents and also pass
-                val name= it.child("name").value
-                val mail=it.child("mail").value
-                val phone= it.child("phone").value
+                val name= it.child("name").value.toString()
+                val mail=it.child("mail").value.toString()
+                val phone= it.child("phone").value.toString()
 
                 val home= Intent(this, Home::class.java)
-                home.putExtra(KEY1, name.toString())
-                home.putExtra(KEY2, mail.toString())
-                home.putExtra(KEY3, phone.toString())
+                home.putExtra(LogIn.KEY1, name.toString())
+                home.putExtra(LogIn.KEY2, mail.toString())
+                home.putExtra(LogIn.KEY3, phone.toString())
                 startActivity(home)
 
             }else{
