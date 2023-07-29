@@ -1,12 +1,12 @@
 package com.example.final01
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +14,15 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val name = intent.getStringExtra(LogIn.KEY1)
-        val mail = intent.getStringArrayExtra(LogIn.KEY2)
-        val phone = intent.getStringArrayExtra(LogIn.KEY3)
+
+
+        val btnhome= findViewById<Button>(R.id.btnHome)
+
+        btnhome.setOnClickListener {
+            intent= Intent(applicationContext, ResumeSelect::class.java)
+            startActivity(intent)
+        }
+
 
 
         val home = findViewById<TextView>(R.id.txtHome)
@@ -39,6 +46,8 @@ class Home : AppCompatActivity() {
         val name = intent.getStringExtra(LogIn.KEY1)
         val mail = intent.getStringExtra(LogIn.KEY2)
         val phone = intent.getStringExtra(LogIn.KEY3)
+
+
 
         when (item.itemId) {
             R.id.settings -> {
